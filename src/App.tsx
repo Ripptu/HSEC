@@ -1,4 +1,4 @@
-import { Star, ArrowRight, CheckCircle2, Clock, Phone, Mail, MapPin, Menu, X, Wrench, Leaf, Snowflake, Sparkles, Trash2 } from 'lucide-react';
+import { Star, ArrowRight, CheckCircle2, Clock, Phone, Mail, MapPin, Menu, X, Wrench, Leaf, Snowflake, Sparkles, Trash2, Linkedin, Facebook, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 // Components
@@ -16,10 +16,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 sm:pt-6 pointer-events-none">
       <div className={`pointer-events-auto w-full max-w-5xl bg-white/90 backdrop-blur-md border border-gray-100 rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'shadow-lg shadow-green-900/5' : 'shadow-sm'}`}>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
-            H
-          </div>
-          <span className="font-bold text-slate-900 tracking-tight hidden sm:block">HSEC</span>
+          <span className="font-bold text-slate-900 tracking-tight text-xl">HSEC</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -355,38 +352,164 @@ const Trust = () => {
   );
 };
 
-const CTA = () => {
+const Contact = () => {
   return (
-    <section className="py-24 bg-white px-4 sm:px-6 lg:px-8 relative">
-       {/* Background Image for CTA */}
-       <div className="absolute inset-0 w-full h-full opacity-5 pointer-events-none">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
-       </div>
+    <section id="kontakt" className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-green-100/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-emerald-100/50 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto rounded-[2.5rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-green-900/20 group">
-        {/* Background Gradient & Image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-700 transition-transform duration-700 group-hover:scale-105" />
-        
-        {/* Glassmorphism Overlay */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-[2px]" />
-        
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/20 rounded-full mix-blend-overlay filter blur-3xl animate-float" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-300/20 rounded-full mix-blend-overlay filter blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+          
+          {/* Contact Info Side */}
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full mb-6 shadow-sm">
+                <Mail className="w-4 h-4 text-green-600" />
+                <span className="text-xs font-bold tracking-wider text-slate-700 uppercase">Kontakt</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
+                Wir freuen uns auf <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Ihr Projekt.</span>
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Haben Sie Fragen zu unseren Leistungen oder wünschen Sie ein unverbindliches Angebot? Kontaktieren Sie uns einfach – wir melden uns umgehend bei Ihnen.
+              </p>
+            </div>
 
-        <div className="relative z-10 max-w-2xl mx-auto glass-card p-8 md:p-12 rounded-3xl border-0 shadow-xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6 leading-tight">
-            Bereit für eine sorgenfreie Immobilie?
-          </h2>
-          <p className="text-slate-600 text-lg mb-10 leading-relaxed">
-            Kontaktieren Sie uns für ein unverbindliches Erstgespräch vor Ort. Wir erstellen ein maßgeschneidertes Konzept für Ihr Objekt.
-          </p>
-          <button className="bg-slate-900 text-white hover:bg-slate-800 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2 group/btn">
-            Jetzt Kontakt aufnehmen
-            <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-          </button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="glass-card p-5 rounded-2xl flex flex-col gap-4 group hover:border-green-200 transition-colors h-full">
+                <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0 group-hover:bg-green-100 transition-colors">
+                  <Phone className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-1">Anrufen</h3>
+                  <p className="text-slate-500 text-xs mb-2">Mo-Fr 08:00-18:00</p>
+                  <a href="tel:+49123456789" className="text-lg font-bold text-green-700 hover:text-green-800 transition-colors block truncate">
+                    +49 (0) 123 456 789
+                  </a>
+                </div>
+              </div>
+
+              <div className="glass-card p-5 rounded-2xl flex flex-col gap-4 group hover:border-green-200 transition-colors h-full">
+                <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0 group-hover:bg-green-100 transition-colors">
+                  <Mail className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-1">E-Mail</h3>
+                  <p className="text-slate-500 text-xs mb-2">Jederzeit erreichbar</p>
+                  <a href="mailto:info@hsec-vohburg.de" className="text-lg font-bold text-green-700 hover:text-green-800 transition-colors block truncate">
+                    info@hsec-vohburg.de
+                  </a>
+                </div>
+              </div>
+
+              <div className="glass-card p-5 rounded-2xl flex flex-col gap-4 group hover:border-green-200 transition-colors h-full">
+                <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0 group-hover:bg-green-100 transition-colors">
+                  <MapPin className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-1">Standort</h3>
+                  <p className="text-slate-500 text-xs mb-2">Besuche nach Termin</p>
+                  <address className="text-base font-medium text-slate-700 not-italic leading-tight">
+                    Musterstraße 123<br />85088 Vohburg
+                  </address>
+                </div>
+              </div>
+
+              <a href="https://wa.me/49123456789" target="_blank" rel="noopener noreferrer" className="glass-card p-5 rounded-2xl flex flex-col gap-4 group hover:border-green-400 hover:bg-green-50/50 transition-all cursor-pointer h-full">
+                <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366]/20 transition-colors">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#25D366]" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-1">WhatsApp</h3>
+                  <p className="text-slate-500 text-xs mb-2">Schnell & einfach</p>
+                  <span className="text-lg font-bold text-[#25D366] group-hover:underline decoration-2 underline-offset-2 transition-all">
+                    Chat starten
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Form Side */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl rotate-1 opacity-10 blur-xl scale-105" />
+            <div className="glass-card p-8 md:p-10 rounded-3xl relative shadow-2xl shadow-slate-200/50 border border-white/60">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">Kostenloses Angebot anfordern</h3>
+              
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-bold text-slate-700 ml-1">Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all placeholder:text-slate-400"
+                      placeholder="Ihr Name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-bold text-slate-700 ml-1">Telefon</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all placeholder:text-slate-400"
+                      placeholder="Ihre Nummer"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-bold text-slate-700 ml-1">E-Mail</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all placeholder:text-slate-400"
+                    placeholder="ihre.email@beispiel.de"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-sm font-bold text-slate-700 ml-1">Interesse an</label>
+                  <select 
+                    id="service" 
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all text-slate-600"
+                  >
+                    <option value="">Bitte wählen...</option>
+                    <option value="hausmeister">Hausmeisterservice</option>
+                    <option value="garten">Gartenpflege</option>
+                    <option value="winter">Winterdienst</option>
+                    <option value="reinigung">Gebäudereinigung</option>
+                    <option value="entrümpelung">Entrümpelung</option>
+                    <option value="sonstiges">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-bold text-slate-700 ml-1">Nachricht</label>
+                  <textarea 
+                    id="message" 
+                    rows={4} 
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all placeholder:text-slate-400 resize-none"
+                    placeholder="Wie können wir Ihnen helfen?"
+                  ></textarea>
+                </div>
+
+                <button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 py-4 rounded-xl font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+                  Nachricht senden
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+                
+                <p className="text-xs text-slate-500 text-center mt-4">
+                  Mit dem Absenden erklären Sie sich mit unserer Datenschutzerklärung einverstanden.
+                </p>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -400,23 +523,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
-                H
-              </div>
-              <span className="font-bold text-slate-900 text-xl tracking-tight">HSEC</span>
+              <span className="font-bold text-slate-900 text-2xl tracking-tight">HSEC</span>
             </div>
             <p className="text-slate-500 max-w-sm mb-6">
               Ihr starker Partner für Haus, Garten & Gebäude in Vohburg und Umgebung. Hausmeisterservice Emil Catovic.
             </p>
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-green-600 hover:border-green-600 transition-colors cursor-pointer">
-                in
+                <Linkedin className="w-5 h-5" />
               </div>
               <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-green-600 hover:border-green-600 transition-colors cursor-pointer">
-                fb
+                <Facebook className="w-5 h-5" />
               </div>
               <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-green-600 hover:border-green-600 transition-colors cursor-pointer">
-                ig
+                <Instagram className="w-5 h-5" />
               </div>
             </div>
           </div>
@@ -465,7 +585,7 @@ export default function App() {
         <Hero />
         <Services />
         <Trust />
-        <CTA />
+        <Contact />
       </main>
       <Footer />
     </div>
